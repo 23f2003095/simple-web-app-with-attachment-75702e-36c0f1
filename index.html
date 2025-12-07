@@ -1,20 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Reference Attachment</title>
-<style>
-  body { font-family: Arial, sans-serif; margin: 20px; }
-  h1 { font-size: 24px; }
-  p { font-size: 16px; }
-  a { color: blue; text-decoration: underline; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 2024 Earnings Report</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai.min.css">
+    <style>
+        .reveal .slides section {
+            text-align: left;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .reveal section img {
+            border: none;
+            box-shadow: none;
+        }
+        .email-footer {
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            font-size: 0.5em;
+            color: #888;
+        }
+        .math-formula {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .metric {
+            display: inline-block;
+            margin: 10px 20px;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+        }
+        .code-example {
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-<h1>Reference Attachment</h1>
-<p>This web page references an attachment: <code>hello.txt</code>.</p>
-<p>You can download the attachment by clicking the link below:</p>
-<a href="attachments/hello.txt" download>Download hello.txt</a>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                <h1>Q4 2024 Earnings Report</h1>
+                <h3>Financial Performance & Strategic Outlook</h3>
+                <p style="margin-top: 50px;">
+                    <small>Prepared by: Technical Consultant</small><br>
+                    <small>Contact: 23f2003095@ds.study.iitm.ac.in</small>
+                </p>
+                <aside class="notes">
+                    Welcome everyone to our Q4 2024 earnings presentation. Today we'll cover our financial performance, key metrics, and strategic initiatives. The presentation should take approximately 20 minutes.
+                </aside>
+            </section>
+
+            <!-- Executive Summary with Fragments -->
+            <section>
+                <h2>Executive Summary</h2>
+                <div class="fragment fade-in-then-semi-out">
+                    <div class="metric">
+                        <h3>$2.4B</h3>
+                        <p>Total Revenue</p>
+                    </div>
+                </div>
+                <div class="fragment fade-in-then-semi-out">
+                    <div class="metric">
+                        <h3>18.5%</h3>
+                        <p>YoY Growth</p>
+                    </div>
+                </div>
+                <div class="fragment fade-in">
+                    <div class="metric">
+                        <h3>$0.87</h3>
+                        <p>EPS (Earnings Per Share)</p>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Our Q4 results exceeded expectations across all key metrics. Revenue grew 18.5% year-over-year, driven by strong performance in our digital banking division. EPS of $0.87 beat consensus estimates by $0.05.
+                </aside>
+            </section>
+
+            <!-- Markdown Slide -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Key Highlights
+
+                    ### Performance Drivers
+                    - **Digital Banking**: 32% growth in active users
+                    - **Investment Services**: $450M in net new assets
+                    - **Risk Management**: NPL ratio improved to 1.2%
+                    
+                    ### Strategic Initiatives
+                    1. AI-powered fraud detection deployed
+                    2. Mobile app redesign completed
+                    3. ESG framework implementation initiated
+                    
+                    ---
+                    
+                    *All figures represent Q4 2024 performance*
+                </textarea>
+                <aside class="notes">
+                    These highlights demonstrate our multi-pronged growth strategy. Digital banking continues to be our strongest performer, while our risk management improvements show operational excellence.
+                </aside>
+            </section>
+
+            <!-- Financial Formulas -->
+            <section>
+                <h2>Key Financial Metrics</h2>
+                <div class="math-formula">
+                    <h4>Return on Equity (ROE)</h4>
+                    <p style="font-size: 1.2em; text-align: center;">
+                        ROE = <sup>Net Income</sup>/<sub>Shareholder Equity</sub> = <sup>$487M</sup>/<sub>$3.2B</sub> = 15.2%
+                    </p>
+                </div>
+                <div class="math-formula fragment">
+                    <h4>Efficiency Ratio</h4>
+                    <p style="font-size: 1.2em; text-align: center;">
+                        Efficiency Ratio = <sup>Operating Expenses</sup>/<sub>Revenue</sub> × 100 = <sup>$1.44B</sup>/<sub>$2.4B</sub> × 100 = 60%
+                    </p>
+                </div>
+                <div class="fragment">
+                    <p style="margin-top: 30px;"><strong>Interpretation:</strong> ROE of 15.2% exceeds our target of 14%, while our efficiency ratio of 60% demonstrates strong cost management.</p>
+                </div>
+                <aside class="notes">
+                    Our ROE of 15.2% places us in the top quartile of our peer group. The efficiency ratio of 60% is best-in-class and reflects our ongoing operational improvements and technology investments.
+                </aside>
+            </section>
+
+            <!-- Code Sample: Risk Analysis -->
+            <section>
+                <h2>Risk Analysis Algorithm</h2>
+                <div class="code-example">
+                    <pre><code class="language-python" data-trim data-noescape>
+import numpy as np
+import pandas as pd
+
+def calculate_var(portfolio_returns, confidence_level=0.95):
+    """
+    Calculate Value at Risk (VaR) for portfolio
+    
+    Args:
+        portfolio_returns: Array of historical returns
+        confidence_level: Confidence level (default 95%)
+    
+    Returns:
+        VaR: Value at Risk in percentage
+    """
+    sorted_returns = np.sort(portfolio_returns)
+    index = int((1 - confidence_level) * len(sorted_returns))
+    var = abs(sorted_returns[index])
+    
+    return var
+
+# Example calculation
+returns = np.random.normal(0.001, 0.02, 1000)
+var_95 = calculate_var(returns, 0.95)
+print(f"95% VaR: {var_95:.2%}")
+                    </code></pre>
+                </div>
+                <aside class="notes">
+                    This Python code demonstrates our proprietary VaR calculation methodology. We use this across all trading desks to ensure consistent risk measurement. The algorithm processes historical returns to calculate potential losses at specified confidence levels.
+                </aside>
+            </section>
+
+            <!-- Code Sample: API Integration -->
+            <section>
+                <h2>Digital Banking API</h2>
+                <div class="code-example">
+                    <pre><code class="language-javascript" data-trim data-noescape>
+// Transaction API endpoint
+const processTransaction = async (transactionData) => {
+    const {amount, fromAccount, toAccount, type} = transactionData;
+    
+    // Fraud detection check
+    const fraudScore = await fraudDetection.analyze({
+        amount: amount,
+        accountHistory: await getAccountHistory(fromAccount),
+        velocity: await calculateVelocity(fromAccount)
+    });
+    
+    if (fraudScore > 0.85) {
+        return {
+            status: 'blocked',
+            reason: 'High fraud risk detected',
+            reviewRequired: true
+        };
+    }
+    
+    // Process transaction
+    const result = await ledger.transfer(
+        fromAccount, 
+        toAccount, 
+        amount
+    );
+    
+    return {
+        status: 'success',
+        transactionId: result.id,
+        timestamp: new Date().toISOString()
+    };
+};
+                    </code></pre>
+                </div>
+                <aside class="notes">
+                    Our new API infrastructure processes over 50,000 transactions per second. The integrated fraud detection system has reduced fraudulent transactions by 73% while maintaining a false positive rate under 0.5%.
+                </aside>
+            </section>
+
+            <!-- Animated Growth Chart -->
+            <section>
+                <h2>Quarterly Revenue Trend</h2>
+                <div class="fragment fade-up">
+                    <p>Q1 2024: $1.9B <span class="fragment highlight-green">→ +8%</span></p>
+                </div>
+                <div class="fragment fade-up">
+                    <p>Q2 2024: $2.1B <span class="fragment highlight-green">→ +10.5%</span></p>
+                </div>
+                <div class="fragment fade-up">
+                    <p>Q3 2024: $2.2B <span class="fragment highlight-green">→ +4.8%</span></p>
+                </div>
+                <div class="fragment fade-up">
+                    <p>Q4 2024: $2.4B <span class="fragment highlight-green">→ +9.1%</span></p>
+                </div>
+                <div class="fragment" style="margin-top: 30px;">
+                    <p><strong>Total FY 2024 Revenue: $8.6B (+8.1% YoY)</strong></p>
+                </div>
+                <aside class="notes">
+                    We've demonstrated consistent quarter-over-quarter growth throughout 2024. Q4's strong performance was driven by seasonal factors and successful product launches in November.
+                </aside>
+            </section>
+
+            <!-- Strategic Outlook -->
+            <section>
+                <h2>2025 Strategic Priorities</h2>
+                <ul>
+                    <li class="fragment">Expand AI/ML capabilities across all business units</li>
+                    <li class="fragment">Launch next-generation mobile banking platform</li>
+                    <li class="fragment">Achieve carbon neutrality in operations</li>
+                    <li class="fragment">Enter 3 new international markets</li>
+                    <li class="fragment">Enhance cybersecurity infrastructure</li>
+                </ul>
+                <div class="fragment" style="margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                    <p><strong>2025 Revenue Guidance:</strong> $9.4B - $9.7B (+9-13%)</p>
+                    <p><strong>EPS Guidance:</strong> $3.60 - $3.80</p>
+                </div>
+                <aside class="notes">
+                    Our 2025 strategy focuses on sustainable growth through technology innovation and market expansion. The guidance reflects confidence in our business model while accounting for potential macroeconomic headwinds.
+                </aside>
+            </section>
+
+            <!-- Q&A Slide -->
+            <section data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                <h1>Questions & Answers</h1>
+                <p style="margin-top: 50px;">Thank you for your attention</p>
+                <p style="margin-top: 30px;">
+                    <small>Contact: 23f2003095@ds.study.iitm.ac.in</small>
+                </p>
+                <aside class="notes">
+                    Open for questions. Key topics to be prepared for: digital banking ROI, international expansion timeline, regulatory compliance costs, and technology investment priorities.
+                </aside>
+            </section>
+        </div>
+        
+        <div class="email-footer">23f2003095@ds.study.iitm.ac.in</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+    
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+            slideNumber: 'c/t',
+            showSlideNumber: 'all',
+            width: 1200,
+            height: 700,
+            margin: 0.1
+        });
+    </script>
 </body>
 </html>
